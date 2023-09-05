@@ -1,4 +1,4 @@
-package BankManagementSystem;
+package bank.management.system;
 
 import bank.management.system.Conn;
 import com.toedter.calendar.JDateChooser;
@@ -228,6 +228,9 @@ public class SignUp1 extends JFrame implements ActionListener {
                 Conn c1=new Conn();
                 String query = "insert into signup1 values('"+formNo+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+marital+"','"+address+"','"+city+"','"+pin+"','"+state+"')";
                 c1.s.executeUpdate(query);
+                
+                setVisible(true);
+                new SignUp2(formNo).setVisible(true);
             }
         }catch(Exception e){
             System.out.println(e);

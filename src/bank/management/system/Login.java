@@ -1,4 +1,4 @@
-package BankManagementSystem;
+package bank.management.system;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -99,7 +99,8 @@ public class Login extends JFrame implements ActionListener {
         } else if (e.getSource() == login) {
 
         } else if (e.getSource() == signup) {
-
+            setVisible(false);
+            new SignUp1().setVisible(true);
         }
         throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
     }
