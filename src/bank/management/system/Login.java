@@ -124,7 +124,7 @@ public class Login extends JFrame implements ActionListener {
             setVisible(false);
             new SignUp1().setVisible(true);
         }
-        throw new UnsupportedOperationException("Unimplemented method 'actionPerformed'");
+      
     }
 
 
