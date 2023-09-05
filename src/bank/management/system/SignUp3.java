@@ -180,6 +180,7 @@ public class SignUp3 extends JFrame implements ActionListener{
         setVisible(true);
     }
     
+    
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()==submit){
             String accontType=null;
