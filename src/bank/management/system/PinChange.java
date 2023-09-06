@@ -65,6 +65,7 @@ public class PinChange extends JFrame implements ActionListener{
         setUndecorated(true);
         setVisible(true);
     }
+    
      @Override
     public void actionPerformed(ActionEvent ae){
          if(ae.getSource()==change){
