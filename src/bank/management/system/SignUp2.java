@@ -29,7 +29,7 @@ public class SignUp2 extends JFrame implements ActionListener {
 
         JLabel title = new JLabel("PAGE 2 : ADDITIONAL DETAILS");
         title.setFont(new Font("Raleway", Font.BOLD, 22));
-        title.setBounds(290,80,400,30);
+        title.setBounds(250,80,400,30);
         add(title);
 
 
@@ -80,7 +80,7 @@ public class SignUp2 extends JFrame implements ActionListener {
         qualification.setBounds(100,320,200,30);
         add(qualification);
         
-        String valEducation[] = {"10th","12th","Gruduate","Post-graduate","Doctorate","Other"};
+        String valEducation[] = {"10th","12th","Graduate","Post-graduate","Doctorate","Other"};
         educationDrop= new JComboBox(valEducation);
         educationDrop.setFont(new Font("Raleway", Font.BOLD, 14));
         educationDrop.setBounds(300,320,400,30);
@@ -209,6 +209,9 @@ public class SignUp2 extends JFrame implements ActionListener {
                 Conn c1 = new Conn();
                 String query = "insert into signup2 values('"+formno+"','"+religion+"','"+category+"','"+income+"','"+education+"','"+occupation+"','"+pan+"','"+aadhar+"','"+seniorCitizen+"','"+existingAccount+"')";
                 c1.s.executeUpdate(query);
+                
+                new SignUp3(formno).setVisible(true);
+                setVisible(false);
             
         }catch(Exception e){
             System.out.println(e);
